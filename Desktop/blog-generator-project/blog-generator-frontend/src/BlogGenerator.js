@@ -5,7 +5,10 @@ import axios from 'axios';
 import ReactMarkdown from 'react-markdown'; // Library to render Markdown
 
 // Set the API URL to your FastAPI backend
-const API_URL = 'http://localhost:8000/generate-blog'; 
+// const API_URL = 'http://localhost:8000/generate-blog'; 
+const API_URL = `${process.env.REACT_APP_API_URL}/generate-blog`; 
+console.log(API_URL);
+
 
 function BlogGenerator() {
   const [prompt, setPrompt] = useState('');
